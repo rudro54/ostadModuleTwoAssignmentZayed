@@ -1,29 +1,19 @@
 <?php
 
 
+$firstElement = 0;
+$secondElement = 1;
 
-function printFibonacciUptoANumber($number)
-{
+echo $firstElement . " ," . $secondElement;
 
-    $firstElement = 0;
-    $secondElement = 1;
+for ($i = 2; $i <= 9; $i++) {
 
-    echo $firstElement . " ," . $secondElement;
+    $newElement = $firstElement + $secondElement;
 
-    for ($i = 2; $i <= $number - 1; $i++) {
-
-        $newElement = $firstElement + $secondElement;
-        if ($newElement < 100) {
-            echo ", " . $newElement;
-        }
-        $firstElement = $secondElement;
-        $secondElement = $newElement;
-
+    if ($newElement < 100) {
+        echo ", " . $newElement;
     }
-
-
-
+    $firstElement = $secondElement;
+    $secondElement = $newElement;
 
 }
-
-printFibonacciUptoANumber(10);
